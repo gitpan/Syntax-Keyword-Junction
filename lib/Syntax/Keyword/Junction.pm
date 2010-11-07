@@ -1,38 +1,31 @@
 package Syntax::Keyword::Junction;
 BEGIN {
-  $Syntax::Keyword::Junction::VERSION = '0.001000';
+  $Syntax::Keyword::Junction::VERSION = '0.002000';
 }
 
 use strict;
 use warnings;
 
-use Syntax::Keyword::Junction::All;
-use Syntax::Keyword::Junction::Any;
-use Syntax::Keyword::Junction::None;
-use Syntax::Keyword::Junction::One;
+# ABSTRACT: Perl6 style Junction operators in Perl5
 
-require Exporter;
+require Syntax::Keyword::Junction::All;
+require Syntax::Keyword::Junction::Any;
+require Syntax::Keyword::Junction::None;
+require Syntax::Keyword::Junction::One;
 
-our @ISA = qw/ Exporter /;
-my @routines = qw/ all any none one /;
-our @EXPORT_OK = @routines;
-our %EXPORT_TAGS = ( ALL => [@routines] );
+use Sub::Exporter -setup => {
+   exports => [qw( all any none one )],
+   groups => {
+      default => [qw( all any none one )],
+      # for the switch from Exporter
+      ALL     => [qw( all any none one )],
+   },
+};
 
-sub all {
-    return Syntax::Keyword::Junction::All->new(@_);
-}
-
-sub any {
-    return Syntax::Keyword::Junction::Any->new(@_);
-}
-
-sub none {
-    return Syntax::Keyword::Junction::None->new(@_);
-}
-
-sub one {
-    return Syntax::Keyword::Junction::One->new(@_);
-}
+sub all  { Syntax::Keyword::Junction::All->new(@_)  }
+sub any  { Syntax::Keyword::Junction::Any->new(@_)  }
+sub none { Syntax::Keyword::Junction::None->new(@_) }
+sub one  { Syntax::Keyword::Junction::One->new(@_)  }
 
 1;
 
@@ -42,11 +35,11 @@ sub one {
 
 =head1 NAME
 
-Syntax::Keyword::Junction
+Syntax::Keyword::Junction - Perl6 style Junction operators in Perl5
 
 =head1 VERSION
 
-version 0.001000
+version 0.002000
 
 =head1 SYNOPSIS
 
@@ -76,6 +69,14 @@ version 0.001000
     ...
   }
 
+or if you want to rename an export, use L<Sub::Exporter> options:
+
+  use Syntax::Keyword::Junction any => { -as => 'robot_any' };
+
+  if (robot_any(@grant) eq 'su') {
+    ...
+  }
+
 =head1 DESCRIPTION
 
 This is a lightweight module which provides 'Junction' operators, the most
@@ -91,10 +92,6 @@ Notice in the L</SYNOPSIS> above, that if you want to match against a
 regular expression, you must use C<==> or C<!=>. B<Not> C<=~> or C<!~>. You
 must also use a regex object, such as C<qr/\d/>, not a plain regex such as
 C</\d/>.
-
-=head1 NAME
-
-Syntax::Keyword::Junction - Perl6 style Junction operators in Perl5.
 
 =head1 SUBROUTINES
 

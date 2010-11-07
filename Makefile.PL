@@ -9,7 +9,7 @@ use ExtUtils::MakeMaker 6.31;
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'Perl6 style Junction operators in Perl5.',
+  'ABSTRACT' => 'Perl6 style Junction operators in Perl5',
   'AUTHOR' => 'Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>, Carl Franks',
   'BUILD_REQUIRES' => {},
   'CONFIGURE_REQUIRES' => {
@@ -20,9 +20,10 @@ my %WriteMakefileArgs = (
   'LICENSE' => 'perl',
   'NAME' => 'Syntax::Keyword::Junction',
   'PREREQ_PM' => {
+    'Sub::Exporter' => '0',
     'Test::More' => '0'
   },
-  'VERSION' => '0.001000',
+  'VERSION' => '0.002000',
   'test' => {
     'TESTS' => 't/*.t'
   }

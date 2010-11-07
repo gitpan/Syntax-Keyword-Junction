@@ -1,8 +1,8 @@
 NAME
-    Syntax::Keyword::Junction
+    Syntax::Keyword::Junction - Perl6 style Junction operators in Perl5
 
 VERSION
-    version 0.001000
+    version 0.002000
 
 SYNOPSIS
       use Syntax::Keyword::Junction qw/ all any none one /;
@@ -31,6 +31,14 @@ SYNOPSIS
         ...
       }
 
+    or if you want to rename an export, use Sub::Exporter options:
+
+      use Syntax::Keyword::Junction any => { -as => 'robot_any' };
+
+      if (robot_any(@grant) eq 'su') {
+        ...
+      }
+
 DESCRIPTION
     This is a lightweight module which provides 'Junction' operators, the
     most commonly used being "any" and "all".
@@ -45,9 +53,6 @@ DESCRIPTION
     regular expression, you must use "==" or "!=". Not "=~" or "!~". You
     must also use a regex object, such as "qr/\d/", not a plain regex such
     as "/\d/".
-
-NAME
-    Syntax::Keyword::Junction - Perl6 style Junction operators in Perl5.
 
 SUBROUTINES
   all()

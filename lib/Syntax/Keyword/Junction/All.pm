@@ -1,6 +1,6 @@
 package Syntax::Keyword::Junction::All;
 BEGIN {
-  $Syntax::Keyword::Junction::All::VERSION = '0.001000';
+  $Syntax::Keyword::Junction::All::VERSION = '0.002000';
 }
 
 use strict;
@@ -190,7 +190,7 @@ Syntax::Keyword::Junction::All
 
 =head1 VERSION
 
-version 0.001000
+version 0.002000
 
 =head1 AUTHORS
 

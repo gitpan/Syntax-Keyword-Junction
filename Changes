@@ -1,4 +1,8 @@
 Revision history for Syntax-Keyword-Junction
 
+0.002000  2010-11-06 22:47:32 CST6CDT
+    - Add support for syntax.pm
+    - Switch to Sub::Exporter
+
 0.001000  2010-11-06 19:22:48 CST6CDT
     - Initial fork of Perl6::Junction

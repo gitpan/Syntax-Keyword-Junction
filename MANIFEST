@@ -5,6 +5,7 @@ META.json
 Makefile.PL
 README
 dist.ini
+lib/Syntax/Feature/Junction.pm
 lib/Syntax/Keyword/Junction.pm
 lib/Syntax/Keyword/Junction/All.pm
 lib/Syntax/Keyword/Junction/Any.pm
@@ -20,3 +21,4 @@ t/no_import.t
 t/none.t
 t/one.t
 t/release-pod-syntax.t
+t/syntax.t
