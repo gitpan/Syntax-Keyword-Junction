@@ -1,6 +1,6 @@
 package Syntax::Keyword::Junction;
 BEGIN {
-  $Syntax::Keyword::Junction::VERSION = '0.002000';
+  $Syntax::Keyword::Junction::VERSION = '0.002001';
 }
 
 use strict;
@@ -39,7 +39,7 @@ Syntax::Keyword::Junction - Perl6 style Junction operators in Perl5
 
 =head1 VERSION
 
-version 0.002000
+version 0.002001
 
 =head1 SYNOPSIS
 

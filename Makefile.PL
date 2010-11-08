@@ -21,9 +21,10 @@ my %WriteMakefileArgs = (
   'NAME' => 'Syntax::Keyword::Junction',
   'PREREQ_PM' => {
     'Sub::Exporter' => '0',
-    'Test::More' => '0'
+    'Test::More' => '0',
+    'syntax' => '0'
   },
-  'VERSION' => '0.002000',
+  'VERSION' => '0.002001',
   'test' => {
     'TESTS' => 't/*.t'
   }
