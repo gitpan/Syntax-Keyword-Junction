@@ -4,29 +4,29 @@ use warnings;
 
 
 
-use ExtUtils::MakeMaker 6.31;
+use ExtUtils::MakeMaker 6.30;
 
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'Perl6 style Junction operators in Perl5',
-  'AUTHOR' => 'Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>, Carl Franks',
-  'BUILD_REQUIRES' => {},
-  'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.31'
+  "ABSTRACT" => "Perl6 style Junction operators in Perl5",
+  "AUTHOR" => "Arthur Axel \"fREW\" Schmidt <frioux+cpan\@gmail.com>, Carl Franks",
+  "BUILD_REQUIRES" => {},
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30"
   },
-  'DISTNAME' => 'Syntax-Keyword-Junction',
-  'EXE_FILES' => [],
-  'LICENSE' => 'perl',
-  'NAME' => 'Syntax::Keyword::Junction',
-  'PREREQ_PM' => {
-    'Sub::Exporter' => '0',
-    'Test::More' => '0',
-    'syntax' => '0'
+  "DISTNAME" => "Syntax-Keyword-Junction",
+  "EXE_FILES" => [],
+  "LICENSE" => "perl",
+  "NAME" => "Syntax::Keyword::Junction",
+  "PREREQ_PM" => {
+    "Sub::Exporter::Progressive" => "0.001006",
+    "Test::More" => 0,
+    "syntax" => 0
   },
-  'VERSION' => '0.002001',
-  'test' => {
-    'TESTS' => 't/*.t'
+  "VERSION" => "0.003000",
+  "test" => {
+    "TESTS" => "t/*.t"
   }
 );
 

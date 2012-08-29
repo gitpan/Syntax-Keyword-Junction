@@ -1,10 +1,9 @@
 package Syntax::Keyword::Junction;
-BEGIN {
-  $Syntax::Keyword::Junction::VERSION = '0.002001';
-}
 
 use strict;
 use warnings;
+
+our $VERSION = '0.003000'; # VERSION
 
 # ABSTRACT: Perl6 style Junction operators in Perl5
 
@@ -13,7 +12,7 @@ require Syntax::Keyword::Junction::Any;
 require Syntax::Keyword::Junction::None;
 require Syntax::Keyword::Junction::One;
 
-use Sub::Exporter -setup => {
+use Sub::Exporter::Progressive -setup => {
    exports => [qw( all any none one )],
    groups => {
       default => [qw( all any none one )],
@@ -39,7 +38,7 @@ Syntax::Keyword::Junction - Perl6 style Junction operators in Perl5
 
 =head1 VERSION
 
-version 0.002001
+version 0.003000
 
 =head1 SYNOPSIS
 
@@ -101,6 +100,7 @@ Returns an object which overloads the following operators:
 
   '<',  '<=', '>',  '>=', '==', '!=',
   'lt', 'le', 'gt', 'ge', 'eq', 'ne',
+  '~~'
 
 Returns true only if B<all> arguments test true according to the operator
 used.
@@ -111,6 +111,7 @@ Returns an object which overloads the following operators:
 
   '<',  '<=', '>',  '>=', '==', '!=',
   'lt', 'le', 'gt', 'ge', 'eq', 'ne',
+  '~~'
 
 Returns true if B<any> argument tests true according to the operator used.
 
@@ -120,6 +121,7 @@ Returns an object which overloads the following operators:
 
   '<',  '<=', '>',  '>=', '==', '!=',
   'lt', 'le', 'gt', 'ge', 'eq', 'ne',
+  '~~'
 
 Returns true only if B<no> argument tests true according to the operator
 used.
@@ -130,6 +132,7 @@ Returns an object which overloads the following operators:
 
   '<',  '<=', '>',  '>=', '==', '!=',
   'lt', 'le', 'gt', 'ge', 'eq', 'ne',
+  '~~'
 
 Returns true only if B<one and only one> argument tests true according to
 the operator used.
@@ -144,6 +147,13 @@ junctions.  You can do this by calling the C<values> method on a junction.
 
  $numbers = any( grep { $_ != 3 } $numbers->values );
  print $numbers == 3 ? 'Yes' : 'No';   # No
+
+You can also use the C<map> method:
+
+ my $numbers = any(qw/1 2 3 4 5/);
+ my $prime   = $numbers->map( \&is_prime );
+
+ say for $prime->values; # prints 0, 1, 1, 0, 1
 
 =head1 EXPORT
 
@@ -202,7 +212,7 @@ Carl Franks
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Arthur Axel "fREW" Schmidt.
+This software is copyright (c) 2012 by Arthur Axel "fREW" Schmidt.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

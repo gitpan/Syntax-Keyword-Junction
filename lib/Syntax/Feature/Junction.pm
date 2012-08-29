@@ -1,10 +1,9 @@
 package Syntax::Feature::Junction;
-BEGIN {
-  $Syntax::Feature::Junction::VERSION = '0.002001';
-}
 
 use strict;
 use warnings;
+
+our $VERSION = '0.003000'; # VERSION
 
 # ABSTRACT: Provide keywords for any, all, none, or one
 
@@ -34,7 +33,7 @@ Syntax::Feature::Junction - Provide keywords for any, all, none, or one
 
 =head1 VERSION
 
-version 0.002001
+version 0.003000
 
 =head1 SYNOPSIS
 
@@ -93,7 +92,7 @@ Carl Franks
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Arthur Axel "fREW" Schmidt.
+This software is copyright (c) 2012 by Arthur Axel "fREW" Schmidt.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

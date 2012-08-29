@@ -1,10 +1,9 @@
 package Syntax::Keyword::Junction::Base;
-BEGIN {
-  $Syntax::Keyword::Junction::Base::VERSION = '0.002001';
-}
 
 use strict;
 use warnings;
+
+our $VERSION = '0.003000'; # VERSION
 
 use overload(
     '=='   => "num_eq",
@@ -23,6 +22,8 @@ use overload(
     '""'   => sub {shift},
 );
 
+use if ($] >= 5.010001), overload => '~~' => 'match';
+
 sub new {
     my ( $class, @param ) = @_;
     return bless \@param, $class;
@@ -31,6 +32,12 @@ sub new {
 sub values {
     my $self = shift;
     return wantarray ? @$self : [ @$self ];
+}
+
+sub map {
+    my ( $self, $code ) = @_;
+    my $class = ref $self;
+    $class->new( map { $code->( $_ ) } $self->values );
 }
 
 1;
@@ -45,7 +52,7 @@ Syntax::Keyword::Junction::Base
 
 =head1 VERSION
 
-version 0.002001
+version 0.003000
 
 =head1 AUTHORS
 
@@ -63,7 +70,7 @@ Carl Franks
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Arthur Axel "fREW" Schmidt.
+This software is copyright (c) 2012 by Arthur Axel "fREW" Schmidt.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

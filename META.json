@@ -5,7 +5,7 @@
       "Carl Franks"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.102342, CPAN::Meta::Converter version 2.102400",
+   "generated_by" : "Dist::Zilla version 4.300021, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -17,23 +17,25 @@
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : "6.31"
+            "ExtUtils::MakeMaker" : "6.30"
          }
       },
       "runtime" : {
          "requires" : {
-            "Sub::Exporter" : 0,
-            "Test::More" : 0,
-            "syntax" : 0
+            "Sub::Exporter::Progressive" : "0.001006",
+            "Test::More" : "0",
+            "syntax" : "0"
          }
       }
    },
    "release_status" : "stable",
    "resources" : {
       "repository" : {
-         "url" : "http://github.com/frioux/Syntax-Keyword-Junction"
+         "type" : "git",
+         "url" : "git://github.com/frioux/Syntax-Keyword-Junction.git",
+         "web" : "http://github.com/frioux/Syntax-Keyword-Junction"
       }
    },
-   "version" : "0.002001"
+   "version" : "0.003000"
 }
 

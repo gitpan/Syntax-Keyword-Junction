@@ -1,12 +1,35 @@
 package Syntax::Keyword::Junction::Any;
-BEGIN {
-  $Syntax::Keyword::Junction::Any::VERSION = '0.002001';
-}
 
 use strict;
 use warnings;
 
+our $VERSION = '0.003000'; # VERSION
+
 use base 'Syntax::Keyword::Junction::Base';
+
+BEGIN {
+  if ($] >= 5.010001) {
+    eval q<
+sub match {
+    my ( $self, $other, $is_rhs ) = @_;
+
+    if ($is_rhs) {
+        for (@$self) {
+            return 1 if $other ~~ $_;
+        }
+
+        return;
+    }
+
+    for (@$self) {
+        return 1 if $_ ~~ $other;
+    }
+
+    return;
+}
+>
+  }
+}
 
 sub num_eq {
     return regex_eq(@_) if ref( $_[1] ) eq 'Regexp';
@@ -190,7 +213,7 @@ Syntax::Keyword::Junction::Any
 
 =head1 VERSION
 
-version 0.002001
+version 0.003000
 
 =head1 AUTHORS
 
@@ -208,7 +231,7 @@ Carl Franks
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Arthur Axel "fREW" Schmidt.
+This software is copyright (c) 2012 by Arthur Axel "fREW" Schmidt.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

@@ -2,7 +2,7 @@ NAME
     Syntax::Keyword::Junction - Perl6 style Junction operators in Perl5
 
 VERSION
-    version 0.002001
+    version 0.003000
 
 SYNOPSIS
       use Syntax::Keyword::Junction qw/ all any none one /;
@@ -60,6 +60,7 @@ SUBROUTINES
 
       '<',  '<=', '>',  '>=', '==', '!=',
       'lt', 'le', 'gt', 'ge', 'eq', 'ne',
+      '~~'
 
     Returns true only if all arguments test true according to the operator
     used.
@@ -69,6 +70,7 @@ SUBROUTINES
 
       '<',  '<=', '>',  '>=', '==', '!=',
       'lt', 'le', 'gt', 'ge', 'eq', 'ne',
+      '~~'
 
     Returns true if any argument tests true according to the operator used.
 
@@ -77,6 +79,7 @@ SUBROUTINES
 
       '<',  '<=', '>',  '>=', '==', '!=',
       'lt', 'le', 'gt', 'ge', 'eq', 'ne',
+      '~~'
 
     Returns true only if no argument tests true according to the operator
     used.
@@ -86,6 +89,7 @@ SUBROUTINES
 
       '<',  '<=', '>',  '>=', '==', '!=',
       'lt', 'le', 'gt', 'ge', 'eq', 'ne',
+      '~~'
 
     Returns true only if one and only one argument tests true according to
     the operator used.
@@ -100,6 +104,13 @@ ALTERING JUNCTIONS
 
      $numbers = any( grep { $_ != 3 } $numbers->values );
      print $numbers == 3 ? 'Yes' : 'No';   # No
+
+    You can also use the "map" method:
+
+     my $numbers = any(qw/1 2 3 4 5/);
+     my $prime   = $numbers->map( \&is_prime );
+
+     say for $prime->values; # prints 0, 1, 1, 0, 1
 
 EXPORT
     'all', 'any', 'none', 'one', as requested.
@@ -144,7 +155,7 @@ AUTHORS
     *   Carl Franks
 
 COPYRIGHT AND LICENSE
-    This software is copyright (c) 2010 by Arthur Axel "fREW" Schmidt.
+    This software is copyright (c) 2012 by Arthur Axel "fREW" Schmidt.
 
     This is free software; you can redistribute it and/or modify it under
     the same terms as the Perl 5 programming language system itself.
