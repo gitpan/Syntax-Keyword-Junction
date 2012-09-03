@@ -3,7 +3,7 @@ package Syntax::Keyword::Junction::One;
 use strict;
 use warnings;
 
-our $VERSION = '0.003000'; # VERSION
+our $VERSION = '0.003001'; # VERSION
 
 use base 'Syntax::Keyword::Junction::Base';
 
@@ -282,8 +282,8 @@ sub bool {
 
 1;
 
-
 __END__
+
 =pod
 
 =head1 NAME
@@ -292,7 +292,7 @@ Syntax::Keyword::Junction::One
 
 =head1 VERSION
 
-version 0.003000
+version 0.003001
 
 =head1 AUTHORS
 
@@ -316,4 +316,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-

@@ -3,7 +3,7 @@ package Syntax::Keyword::Junction;
 use strict;
 use warnings;
 
-our $VERSION = '0.003000'; # VERSION
+our $VERSION = '0.003001'; # VERSION
 
 # ABSTRACT: Perl6 style Junction operators in Perl5
 
@@ -28,7 +28,7 @@ sub one  { Syntax::Keyword::Junction::One->new(@_)  }
 
 1;
 
-
+__END__
 
 =pod
 
@@ -38,7 +38,7 @@ Syntax::Keyword::Junction - Perl6 style Junction operators in Perl5
 
 =head1 VERSION
 
-version 0.003000
+version 0.003001
 
 =head1 SYNOPSIS
 
@@ -218,8 +218,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
-
-__END__
-
-

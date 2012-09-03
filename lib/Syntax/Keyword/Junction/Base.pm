@@ -3,7 +3,7 @@ package Syntax::Keyword::Junction::Base;
 use strict;
 use warnings;
 
-our $VERSION = '0.003000'; # VERSION
+our $VERSION = '0.003001'; # VERSION
 
 use overload(
     '=='   => "num_eq",
@@ -42,8 +42,8 @@ sub map {
 
 1;
 
-
 __END__
+
 =pod
 
 =head1 NAME
@@ -52,7 +52,7 @@ Syntax::Keyword::Junction::Base
 
 =head1 VERSION
 
-version 0.003000
+version 0.003001
 
 =head1 AUTHORS
 
@@ -76,4 +76,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
