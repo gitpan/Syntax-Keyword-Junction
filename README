@@ -2,7 +2,7 @@ NAME
     Syntax::Keyword::Junction - Perl6 style Junction operators in Perl5
 
 VERSION
-    version 0.003001
+    version 0.003002
 
 SYNOPSIS
       use Syntax::Keyword::Junction qw/ all any none one /;
