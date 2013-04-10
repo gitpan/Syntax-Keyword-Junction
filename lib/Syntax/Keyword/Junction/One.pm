@@ -3,7 +3,7 @@ package Syntax::Keyword::Junction::One;
 use strict;
 use warnings;
 
-our $VERSION = '0.003002'; # VERSION
+our $VERSION = '0.003003'; # VERSION
 
 use base 'Syntax::Keyword::Junction::Base';
 
@@ -292,7 +292,7 @@ Syntax::Keyword::Junction::One
 
 =head1 VERSION
 
-version 0.003002
+version 0.003003
 
 =head1 AUTHORS
 
@@ -310,7 +310,7 @@ Carl Franks
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by Arthur Axel "fREW" Schmidt.
+This software is copyright (c) 2013 by Arthur Axel "fREW" Schmidt.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
