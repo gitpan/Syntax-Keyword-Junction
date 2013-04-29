@@ -3,7 +3,7 @@ package Syntax::Feature::Junction;
 use strict;
 use warnings;
 
-our $VERSION = '0.003003'; # VERSION
+our $VERSION = '0.003004'; # VERSION
 
 # ABSTRACT: Provide keywords for any, all, none, or one
 
@@ -32,7 +32,7 @@ Syntax::Feature::Junction - Provide keywords for any, all, none, or one
 
 =head1 VERSION
 
-version 0.003003
+version 0.003004
 
 =head1 SYNOPSIS
 

@@ -3,7 +3,7 @@ package Syntax::Keyword::Junction::Base;
 use strict;
 use warnings;
 
-our $VERSION = '0.003003'; # VERSION
+our $VERSION = '0.003004'; # VERSION
 
 use overload(
     '=='   => "num_eq",
@@ -52,7 +52,7 @@ Syntax::Keyword::Junction::Base
 
 =head1 VERSION
 
-version 0.003003
+version 0.003004
 
 =head1 AUTHORS
 

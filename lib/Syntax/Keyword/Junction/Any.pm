@@ -3,14 +3,15 @@ package Syntax::Keyword::Junction::Any;
 use strict;
 use warnings;
 
-our $VERSION = '0.003003'; # VERSION
+our $VERSION = '0.003004'; # VERSION
 
 use base 'Syntax::Keyword::Junction::Base';
 
 BEGIN {
   if ($] >= 5.010001) {
-    eval q<
+    eval q|
 sub match {
+    no if $] > 5.017010, warnings => 'experimental::smartmatch';
     my ( $self, $other, $is_rhs ) = @_;
 
     if ($is_rhs) {
@@ -27,7 +28,7 @@ sub match {
 
     return;
 }
->
+|
   }
 }
 
@@ -213,7 +214,7 @@ Syntax::Keyword::Junction::Any
 
 =head1 VERSION
 
-version 0.003003
+version 0.003004
 
 =head1 AUTHORS
 

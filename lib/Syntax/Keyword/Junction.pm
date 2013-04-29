@@ -3,7 +3,7 @@ package Syntax::Keyword::Junction;
 use strict;
 use warnings;
 
-our $VERSION = '0.003003'; # VERSION
+our $VERSION = '0.003004'; # VERSION
 
 # ABSTRACT: Perl6 style Junction operators in Perl5
 
@@ -38,7 +38,7 @@ Syntax::Keyword::Junction - Perl6 style Junction operators in Perl5
 
 =head1 VERSION
 
-version 0.003003
+version 0.003004
 
 =head1 SYNOPSIS
 
