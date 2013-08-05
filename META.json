@@ -28,7 +28,7 @@
       "runtime" : {
          "requires" : {
             "Sub::Exporter::Progressive" : "0.001006",
-            "Test::More" : "0",
+            "Test::More" : "0.88",
             "syntax" : "0"
          }
       }
@@ -44,6 +44,6 @@
          "web" : "http://github.com/frioux/Syntax-Keyword-Junction"
       }
    },
-   "version" : "0.003004"
+   "version" : "0.003005"
 }
 

@@ -15,9 +15,9 @@ meta-spec:
 name: Syntax-Keyword-Junction
 requires:
   Sub::Exporter::Progressive: 0.001006
-  Test::More: 0
+  Test::More: 0.88
   syntax: 0
 resources:
   bugtracker: https://github.com/frioux/Syntax-Keyword-Junction/issues
   repository: git://github.com/frioux/Syntax-Keyword-Junction.git
-version: 0.003004
+version: 0.003005
