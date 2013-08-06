@@ -3,7 +3,7 @@ package Syntax::Keyword::Junction::Base;
 use strict;
 use warnings;
 
-our $VERSION = '0.003005'; # VERSION
+our $VERSION = '0.003006'; # VERSION
 
 use overload(
     '=='   => "num_eq",
@@ -24,10 +24,7 @@ use overload(
 
 use if ($] >= 5.010001), overload => '~~' => 'match';
 
-sub new {
-    my ( $class, @param ) = @_;
-    return bless \@param, $class;
-}
+sub new { bless \@_, shift }
 
 sub values {
     my $self = shift;
@@ -52,7 +49,7 @@ Syntax::Keyword::Junction::Base
 
 =head1 VERSION
 
-version 0.003005
+version 0.003006
 
 =head1 AUTHORS
 

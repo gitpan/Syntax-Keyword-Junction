@@ -5,7 +5,7 @@
       "Carl Franks"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300034, CPAN::Meta::Converter version 2.130880",
+   "generated_by" : "Dist::Zilla version 4.300035, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -29,6 +29,7 @@
          "requires" : {
             "Sub::Exporter::Progressive" : "0.001006",
             "Test::More" : "0.88",
+            "Test::Requires" : "0.07",
             "syntax" : "0"
          }
       }
@@ -44,6 +45,6 @@
          "web" : "http://github.com/frioux/Syntax-Keyword-Junction"
       }
    },
-   "version" : "0.003005"
+   "version" : "0.003006"
 }
 

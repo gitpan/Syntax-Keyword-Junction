@@ -3,7 +3,7 @@ package Syntax::Keyword::Junction::None;
 use strict;
 use warnings;
 
-our $VERSION = '0.003005'; # VERSION
+our $VERSION = '0.003006'; # VERSION
 
 use base 'Syntax::Keyword::Junction::Base';
 
@@ -214,7 +214,7 @@ Syntax::Keyword::Junction::None
 
 =head1 VERSION
 
-version 0.003005
+version 0.003006
 
 =head1 AUTHORS
 
