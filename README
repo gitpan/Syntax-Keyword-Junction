@@ -2,7 +2,7 @@ NAME
     Syntax::Keyword::Junction - Perl6 style Junction operators in Perl5
 
 VERSION
-    version 0.003006
+    version 0.003007
 
 SYNOPSIS
       use Syntax::Keyword::Junction qw/ all any none one /;
@@ -127,7 +127,7 @@ EXPORT
 WARNING
     When comparing against a regular expression, you must remember to use a
     regular expression object: "qr/\d/" Not "/d/". You must also use either
-    "==" or "!=". This is because "=~" and "!~" cannot be overriden.
+    "==" or "!=". This is because "=~" and "!~" cannot be overridden.
 
 TO DO
     Add overloading for arithmetic operators, such that this works:
@@ -144,7 +144,7 @@ SEE ALSO
     Quantum::Superpositions provides the same functionality as this, and
     more. However, this module provides this limited functionality at a much
     greater runtime speed, with my benchmarks showing between 500% and 6000%
-    improvment.
+    improvement.
 
     <http://dev.perl.org/perl6/doc/design/exe/E06.html> - "The Wonderful
     World of Junctions".

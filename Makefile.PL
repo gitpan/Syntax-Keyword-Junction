@@ -21,12 +21,13 @@ my %WriteMakefileArgs = (
   "NAME" => "Syntax::Keyword::Junction",
   "PREREQ_PM" => {
     "Sub::Exporter::Progressive" => "0.001006",
-    "Test::More" => "0.88",
-    "Test::Requires" => "0.07",
     "syntax" => 0
   },
-  "TEST_REQUIRES" => {},
-  "VERSION" => "0.003006",
+  "TEST_REQUIRES" => {
+    "Test::More" => "0.88",
+    "Test::Requires" => "0.07"
+  },
+  "VERSION" => "0.003007",
   "test" => {
     "TESTS" => "t/*.t"
   }
